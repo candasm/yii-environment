@@ -1,12 +1,18 @@
 {
-	"name" : "yiiext/yii-environment",
+	"type": "library",
+	"keywords" :["yii","yiiframework","yii environment","environment","yii framework environment"
+	,"yii basic environment","basic","simple environment"], 
+	"homepage"  : "https://github.com/candasm/yii-environment",
+	"name" : "yiiext/environment",
 	"description" : "simple yii environment class",
 	"authors" :[
 		{
 			"name" : "Candaş Minareci",
-			"email": "candasm@gmail.com"
+			"email": "candasm@gmail.com",
+			"homepage" : "http://www.candasminareci.com"
 		}
 	],
+	"minimum-stability" : "dev",
 	"required" : {
 		"php" : ">=5.3.*",
 		"yiisoft/yii" : ">=1.2.*"
