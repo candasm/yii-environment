@@ -6,8 +6,6 @@
 // CWebApplication properties can be configured here.
 return array(
     //settings for environment class
-    'YII_PATH' => '/framework/yii.php',
-    'YIIC_PATH' => '/framework/yiic.php',
     'YII_DEBUG' => TRUE,
     'YII_TRACE_LEVEL' => 3,
     'name' => 'Development',

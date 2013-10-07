@@ -5,8 +5,7 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
-    'YII_PATH' =>'/framework/yiilite.php',
-    'YIIC_PATH' =>'/framework/yiic.php',
+    'YII_PATH' =>'{frameworkpath}/framework/yiilite.php',    
     'modules' => array(),
     'components' => array(
         'db' => array(

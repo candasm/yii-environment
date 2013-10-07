@@ -32,7 +32,7 @@ class Environment {
     /**
      * @var string config folder path
      */
-    protected $configFolder;
+    protected $configFolder=null;
 
     /**
      * @var string its shows for settings webapp,console,test
@@ -79,7 +79,9 @@ class Environment {
         if (is_null($app)) {
             $app = $this->defaultAppName;
         }
-        $this->configFolder = dirname(__FILE__) . '/../../config/';
+        if(is_null($this->configFolder)){
+            $this->configFolder = dirname(__FILE__) . '/../../../config/';
+        }
         if (!in_array($app, $this->appNames)) {
             echo 'Error: ' . str_replace('{appName}', $app, $this->errors['app_name_is_not_supporting']) . PHP_EOL;
             exit;
@@ -176,6 +178,20 @@ class Environment {
 
     public function getState() {
         return $this->state;
+    }
+    /**
+     * @return string Config folder path environment protected/config
+     */
+    public function getConfigFolder(){
+        return $this->configFolder;
+    }
+    /**
+     * sets application config path
+     * @param string $configPath application config path
+     * 
+     */
+    public function setConfigFolder($configPath){
+        $this->configPath = $configPath;
     }
     /**
      * yiiframework cmap::mergearray function duplicated becaouse of this class starts before framework
