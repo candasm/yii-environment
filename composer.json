@@ -1,0 +1,14 @@
+{
+	"name" : "yiiext/yii-environment",
+	"description" : "simple yii environment class",
+	"authors" :[
+		{
+			"name" : "Candaş Minareci",
+			"email": "candasm@gmail.com"
+		}
+	],
+	"required" : {
+		"php" : ">=5.3.*",
+		"yiisoft/yii" : ">=1.2.*"
+	}
+}
