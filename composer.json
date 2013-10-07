@@ -12,7 +12,6 @@
 			"homepage" : "http://www.candasminareci.com"
 		}
 	],
-	"minimum-stability" : "dev",
 	"required" : {
 		"php" : ">=5.3.*",
 		"yiisoft/yii" : ">=1.2.*"
