@@ -88,6 +88,11 @@ class Environment {
         }
         $this->app = $app;
         $this->state = $environment;
+    }
+    /**
+     * loads environment 
+     */
+    public function load(){
         $this->install();
     }
 

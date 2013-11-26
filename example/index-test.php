@@ -5,8 +5,9 @@
  */
 
 include_once dirname(__FILE__) . '/../Environment.php';
-$environment->setConfigFolder(dirname(__FILE__)."/protected/config/");
 $environment = new Environment('test');
+$environment->setConfigFolder(dirname(__FILE__)."/protected/config/");
+$environment->load();
 $yii = $environment->getYiiPath();
 $config = $environment->getConfig();
 require_once($yii);
