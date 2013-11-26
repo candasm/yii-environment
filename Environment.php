@@ -196,7 +196,7 @@ class Environment {
      * 
      */
     public function setConfigFolder($configPath){
-        $this->configPath = $configPath;
+        $this->configFolder = $configPath;
     }
     /**
      * yiiframework cmap::mergearray function duplicated becaouse of this class starts before framework
