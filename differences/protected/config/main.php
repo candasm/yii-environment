@@ -11,8 +11,8 @@ date_default_timezone_set('Europe/Istanbul');
  * baz alınır.
  */
 return array(
-    "YII_PATH" => "{frameworkpath}/framework/yii.php",
-    "YIIC_PATH" =>"{frameworkpath}/framework/yiic.php",    
+    "YII_PATH" => "protected/vendors/yiisoft/yii/framework/yii.php",
+    "YIIC_PATH" =>"protected/vendors/yiisoft/yii/framework/yiic.php",
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => '',
     // preloading 'log' component

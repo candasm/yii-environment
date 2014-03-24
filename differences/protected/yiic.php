@@ -1,6 +1,6 @@
 <?php
 
-include_once dirname(__FILE__) . '/../../Environment.php';
+include_once __DIR__ . '/vendors/yiiext/environment/Environment.php';
 $environment = new Environment('console');
 $environment->setConfigFolder(dirname(__FILE__).'/config/');
 $environment->load();

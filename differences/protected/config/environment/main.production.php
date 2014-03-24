@@ -5,8 +5,7 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
-    'YII_PATH' =>'{frameworkpath}/framework/yiilite.php',
-    'YIIC_PATH' =>'{frameworkpath}/framework/yiic.php',
+    'YII_PATH' =>'protected/vendors/yiisoft/yii/framework/yiilite.php',
     'modules' => array(),
     'components' => array(
         'db' => array(
@@ -15,16 +14,7 @@ return array(
             'username' => '',
             'password' => '',
             'charset' => 'utf8',
-        ),
-        'log' => array(
-            'routes' => array(
-                array(
-                    'class' => 'CWebLogRoute',
-                    'showInFireBug' => true,
-                    'levels' => 'info',
-                ),
-            ),
-        ),        
+        ),       
     ),
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
