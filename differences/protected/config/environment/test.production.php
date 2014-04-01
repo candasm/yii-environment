@@ -1,7 +1,7 @@
 <?php
 echo 'Tests are not supported for production!';
 exit;
-return CMap::mergeArray(
+return Environment::mergeArray(
 	require(dirname(__FILE__).'/main-production.php'),
 	array(
 		'components'=>array(
