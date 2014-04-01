@@ -9,8 +9,8 @@
  * baz alınır.
  */
 return array(
-    "YII_PATH" => "protected/vendors/yiisoft/yii/framework/yii.php",
-    "YIIC_PATH" =>"protected/vendors/yiisoft/yii/framework/yiic.php",        
+    "YII_PATH" => __DIR__."/../vendors/yiisoft/yii/framework/yii.php",
+    "YIIC_PATH" => __DIR__."/../vendors/yiisoft/yii/framework/yiic.php",        
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => '',    
     // preloading 'log' component
