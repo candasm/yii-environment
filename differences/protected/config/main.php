@@ -11,9 +11,10 @@ date_default_timezone_set('Europe/Istanbul');
  * baz alınır.
  */
 return array(
-    "YII_PATH" => "protected/vendors/yiisoft/yii/framework/yii.php",
-    "YIIC_PATH" =>"protected/vendors/yiisoft/yii/framework/yiic.php",
-    'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
+    "YII_PATH" => __DIR__."/../vendors/yiisoft/yii/framework/yii.php",
+    "YIIC_PATH" =>__DIR__."/../vendors/yiisoft/yii/framework/yiic.php",
+    "YIIT_PATH" =>__DIR__."/../vendors/yiisoft/yii/framework/yiit.php",
+    'basePath' => __DIR__ . DIRECTORY_SEPARATOR . '..',
     'name' => '',
     // preloading 'log' component
     'preload' => array('log'),

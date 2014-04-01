@@ -65,6 +65,7 @@ class Environment {
         'YII_DEBUG' => FALSE,
         'YII_PATH' => NULL,
         'YIIC_PATH' => NULL,
+        'YIIT_PATH' => NULL,
     );
 
     /**
@@ -127,7 +128,7 @@ class Environment {
              * theese key names are not necessary but if u set keys will set as defined variable!
              */
             $unimportantKeyNames = array(
-                'YII_DEBUG', 'YII_TRACE_LEVEL',
+                'YII_DEBUG', 'YII_TRACE_LEVEL', 'YIIT_PATH',
             );
             //check important keys 
             foreach ($importantKeyNames as $name) {
@@ -138,14 +139,14 @@ class Environment {
                 $this->systemConfig[$name] = $config[$name];
             }
             //it doesnt important but also check YII_DEBUG , YII_TRACE_LEVEL and define it if itdoesnt defined
-            foreach ($unimportantKeyNames as $name => $value) {
+            foreach ($unimportantKeyNames as $name) {
                 if (array_key_exists($name, $config)) {
-                    defined($name) or define($name, $value);
+                    defined($name) or define($name, $config[$name]);
                     //set 
                     $this->systemConfig[$name] = $config[$name];
                 }
             }
-            //unset YII_TRACE_LEVEL,YII_DEBUG,YII_PATH,YIIC_PATH
+            //unset YII_TRACE_LEVEL,YII_DEBUG,YII_PATH,YIIC_PATH,YIIT_PATH
             $unsetKeys = array_merge($importantKeyNames, $unimportantKeyNames);
             foreach ($unsetKeys as $name) {
                 if (array_key_exists($name, $config)) {
@@ -180,6 +181,12 @@ class Environment {
     public function getYiicPath() {
         return $this->systemConfig['YIIC_PATH'];
     }
+    /**
+     * returns framework yiit file path
+     */
+    public function getYiitPath() {
+        return $this->systemConfig['YIIT_PATH'];
+    }
 
     public function getState() {
         return $this->state;
@@ -201,7 +208,7 @@ class Environment {
     /**
      * yiiframework cmap::mergearray function duplicated becaouse of this class starts before framework
      */
-    private function mergeArray($a, $b) {
+    public static function mergeArray($a, $b) {
         $args = func_get_args();
         $res = array_shift($args);
         while (!empty($args)) {
